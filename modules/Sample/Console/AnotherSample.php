@@ -39,7 +39,7 @@ class AnotherSample extends Command
      */
     public function fire()
     {
-        info(Carbon::now()->format('YmdHis'). 'From Sample module');
+        info(Carbon::now()->format('YmdHis'). ' From Sample module');
         $this->info("Logged successfully");
     }
 
