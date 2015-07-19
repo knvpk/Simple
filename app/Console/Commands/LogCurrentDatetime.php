@@ -38,7 +38,7 @@ class LogCurrentDatetime extends Command
      */
     public function handle()
     {
-        info(Carbon::now());
+        info(Carbon::now()->format() . "From main Command");
         $this->info("Logged successfully");
     }
 }
