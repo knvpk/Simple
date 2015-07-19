@@ -6,6 +6,7 @@ use App\Console\Commands\Inspire;
 use App\Console\Commands\LogCurrentDatetime;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
+use Modules\Sample\Scheduler;
 
 class Kernel extends ConsoleKernel
 {
@@ -32,6 +33,6 @@ class Kernel extends ConsoleKernel
 
         $schedule->command('log:time')->everyFiveMinutes();
 
-        app('Modules/Sample/Scheduler')->schedule($schedule);
+        app(Scheduler::class)->schedule($schedule);
     }
 }
