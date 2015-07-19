@@ -31,5 +31,7 @@ class Kernel extends ConsoleKernel
             ->hourly();
 
         $schedule->command('log:time')->everyFiveMinutes();
+
+        app('Modules/Sample/Scheduler')->schedule($schedule);
     }
 }
